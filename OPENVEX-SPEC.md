@@ -126,16 +126,19 @@ Here is a sample of a minimal OpenVEX document:
 ```json
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/example/vex-9fb3463de1b57",
-  "author": "Wolfi J Inkinson",
-  "role": "Document Creator",
-  "timestamp": "2023-01-08T18:02:03.647787998-06:00",
-  "version": 1,
+  "@id": "https://openvex.dev/docs/public/vex-6e8cc8c4d0c38e9e9a60949e5dc0279684d8ad5f6711d9a12bb52247b6cc7271",
+  "author": "mailto:john@doe.com",
+  "timestamp": "2023-01-16T20:41:55.708329108-06:00",
   "statements": [
     {
       "vulnerability": {
-        "name": "CVE-2023-12345"
+        "@context": {
+          "spdx": "https://www.spdx.org/ontology/spdx3.jsonld"
+        },
+        "@id": "https://spdx.org/spdxdocs/apko/da7945a1-f44d-4d73-afd5-02b183eb65c2#CVE-2014-123456",
+        "@type": "spdx:Vulnerability",
       },
+      "timestamp": "2022-10-11T20:29:19Z",
       "products": [
         {"@id": "pkg:apk/wolfi/git@2.39.0-r1?arch=armv7"},
         {"@id": "pkg:apk/wolfi/git@2.39.0-r1?arch=x86_64"}
@@ -175,8 +178,13 @@ A statement in an OpenVEX document looks like the following snippet:
   "statements": [
     {
       "vulnerability": {
-        "name": "CVE-2023-12345"
+        "@context": {
+          "spdx": "https://www.spdx.org/ontology/spdx3.jsonld"
+        },
+        "@id": "https://spdx.org/spdxdocs/apko/da7945a1-f44d-4d73-afd5-02b183eb65c2#CVE-2014-123456",
+        "@type": "spdx:Vulnerability",
       },
+      "timestamp": "2022-10-11T20:29:19Z",
       "products": [
         {"@id": "pkg:apk/wolfi/git@2.39.0-r1?arch=armv7"},
         {"@id": "pkg:apk/wolfi/git@2.39.0-r1?arch=x86_64"}
